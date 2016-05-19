@@ -28,3 +28,12 @@ a:visited {
 li:first-child{
 	font-family: cursive;
 }
+
+.family{
+	display: inline-block;
+	margin-left: 5px;
+	height: 100px;
+	width: 100px;
+	border-radius: 100%;
+	border: 2px solid black; 
+}

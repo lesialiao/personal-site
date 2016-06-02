@@ -1,11 +1,25 @@
-$(document).ready(function(){
-	$('div').mouseenter(function(){
-		#('div').fadeTo('fast',1);
-	});
-	$('div').mouseleave(function(){
-		#('div').fadeTo('fast',0.5);
-	});
-});
+var main = function() {
 
-prompt("u good?");
+	$('.menu a').hover(
+		function() {
+			$(this).addClass('active');
+		},
+		function() {
+			$(this).removeClass('active');
+		}
+	);
 
+
+	$('.dropdown-toggle').click(
+		function() {
+			$('.dropdown-menu').toggle();
+		}
+	);
+
+	
+};
+
+
+
+
+$(document).ready(main);

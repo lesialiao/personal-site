@@ -2,36 +2,68 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Lesia Liao's Webpage</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Home - Lesia Liao</title>
 
 		<link type="text/css" rel="stylesheet" href="stylesheet.css"/> 
 		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="script.js"></script>
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
 	</head>
 
-	<body>
+	<body id="home">
 
 		<!--Header and Nav Bar-->
 		<div class="header">
-			<div class="container">
-				<a href="#" class="main-logo">Lesia Liao</a>
-
-				<ul class="menu">
-					<li><a href="#">About</a></li>
-					<li><a href="#">Code Bites</a></li>
-					<li><a href="#">Travel Bites</a></li>
-					<li><a href="#">Contact Me</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle">More <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Resume</a></li>
-							<li><a href="https://www.linkedin.com/in/lesialiao">LinkedIn</a></li>
-							<li><a href="https://github.com/lesialiao">GitHub</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+			<ul class="navbar">
+				<li><a href="index.html" class="logo">Lesia Liao</a></li>
+				<!-- This is interesting because I had to reverse the order of the right menu to make the float:right work -->
+				<li class="dropdown right">
+					<a href="#" class="dropbtn">More</a>
+					<div class="dropdown-content">
+						<a href="Javascript:openInNewPopup('Lesia Liao Resume.pdf');">Resume</a>
+						<a href="Javascript:openInNewPopup('https://www.linkedin.com/in/lesialiao');">LinkedIn</a>
+						<a href="Javascript:openInNewPopup('https://github.com/lesialiao');">GitHub</a>
+					</div>
+				</li>
+				<li class="right"><a href="contact.html">Contact Me</a></li>
+				<li class="right"><a href="travel.html">Travel Bites</a></li>
+				<li class="right"><a href="#">Code Bites</a></li>
+				<li class="right"><a href="#">About</a></li>
+			</ul>
 		</div>
+
+		<!-- -->
+		<br><br>
+		<div class="splash">
+			<img src="magic gardens.jpg">
+			<div class="center">
+				<h1 class="title">LESIA LIAO</h1>
+				<p class="subtitle">Student at Swarthmore College</p>
+				<br>
+				<p class="subtitle"><b>Welcome</b> to my <br> personal website.</p>
+			</div>
+			<div class="bottomRight">Philadelphia's Magic Gardens, Philadelphia, PA, USA, Canon EOS Rebel T3, April 24, 2015</div>
+		</div>
+
+
+		<!-- Footer -->
+		<div class="footer">
+			<ul class="socialButtons">
+				<li><a class="w3-btn-floating w3-blue" href="Javascript:openInNewPopup('https://www.linkedin.com/in/lesialiao');"><i class="fa fa-linkedin"></i></a></li>
+				<li><a class="w3-btn-floating w3-light grey" href="Javascript:openInNewPopup('https://github.com/lesialiao');"><i class="fa fa-github"></i></a></li>
+				<li><a class="w3-btn-floating w3-orange" href="Javascript:openInNewPopup('https://soundcloud.com/tthewanderer')"><i class="fa fa-soundcloud" style="color:white"></i></a></li>
+			</ul>
+				
+			<p>&copy; Lesia Liao 2016 | Designed by scratch, with love. (HTML, CSS, Javascript, W3.CSS) </p> 	
+		</div>
+
+
+
+
+
 		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 		<!--

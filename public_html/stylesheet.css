@@ -1,121 +1,218 @@
-
-/* General */
-
-.container {
-    width: 960px;
-}
-
 /* Header */
-
-.header {
-    background-color: orange;
-    border-bottom: 1px solid black;
-    
+div.header {
     font-family: sans-serif;
-    font-size:1em;
-    padding: 1em; 
-
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-/* Menu */
-
-.header .main-logo {
-    font-family: serif;
-    font-size: 2em;
+    font-size: 1em;
     text-decoration: none;
 }
 
-.header .menu {
-    float: right;
+
+/* Nav bar */ 
+ul.navbar { 
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: pink;
+    background-color: purple;
+    /* position: fixed prevents drop down from working? */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
 }
 
-.menu > li {
+li {
     float: left;
+    font-size: 1em;
 }
 
-.menu a {
-    display: block;
-    color: blue;
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
+    text-decoration: none;   
 }
 
-.active{
-    background-color: green;
+/* a:hover:not(.active) confusing */
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #111;
 }
 
-/* Dropdown */
-
-.dropdown {
-    background-color: red; 
-
+/* because I don't want the name/logo/home to change with hovered */
+a.logo:hover {
+    background-color: purple;
 }
 
-.dropdown-menu {
-    font-size: 16px;
-    min-width: 105px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    
-    position: relative;
+li.right {
+    float: right;
+}
+
+li.dropdown {
     display: inline-block;
 }
 
-.dropdown-menu li a {
-    color: black;
-    padding: 6px 20px;
+.dropdown-content {
+    display: none;
+    /*position: relative;
+    right: 55px;*/
+    position: fixed;
+    right: 0px;
+    background-color: violet;
+    min-width: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-
-
-/*
-div {
-    height: 50px;
-    width: 120px;
-    border-color: #6495ED;
-    background-color: #BCD2EE;
-    border-style: dashed;
-    border-width: 2px;
-    border-radius: 10px;
-    margin: auto;
-    text-align: center;
-}    
-
-a {    
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
     text-decoration: none;
-    font-family: Verdana;
-    font-size: 20px;
-}   
-
-a:hover {
-	color: #cc0000;
-	font-weight: bold;
+    display: block;
+    text-align: left;
 }
 
-a:visited {
-	color: #00ff00;
+.dropdown-content a:hover {
+    background-color: grey;
 }
 
-li:first-child{
-	font-family: cursive;
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
-.family{
-	display: inline-block;
-	margin-left: 5px;
-	height: 100px;
-	width: 100px;
-	border-radius: 100%;
-	border: 2px solid black; 
+li a.active { /* idk if works? */
+    background-color: green;
+} 
+
+/* makes responsive? */
+@media screen and (max-width: 600px){
+    ul.navbar li.right, ul.navbar li {
+        float: none;
+    }
 }
-*/
+
+/* Footer */
+div.footer {
+    font-family: sans-serif;
+    font-size: .80em;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Social Buttons */ 
+ul.socialButtons { 
+    list-style-type: none;
+    overflow: hidden;
+
+    /* TODO: 
+    display: block;
+    margin: auto;
+    width: 50%;
+    background-color: yellow
+    */
+}
+
+ul.socialButtons li {
+    padding: 1em;
+    float: left;
+}
+
+ul.socialButtons li a {
+    display: block;
+    text-decoration: none;
+}
+
+/* Home page */
+#home {
+    background-color: white;
+    background-attachment: fixed;
+}
+
+
+
+/* Travel */
+#travel {
+    background-image: url("map.jpg");  
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+div.blurbBox{
+    margin: 5%;
+    background-color: coral;
+    opacity: 0.8;
+    filter: alpha(opacity=60); /* For IE8 and earlier */ 
+}
+
+div.blurbBox h2 {
+    margin-left: 5%;
+    font-weight: bold;
+    color: white;
+}
+
+div.blurbBox p {
+    margin-left: 5%;
+    color: white;
+}
+
+/* Contact Me */
+div.contactInfo{
+    margin: 5%;
+    background-color: #D8D8D8;
+    opacity: 0.8;
+    filter: alpha(opacity=60); /* For IE8 and earlier */ 
+}
+
+div.contactInfo h2 {
+    text-align: center;
+    color: black;
+}
+
+div.contactInfo a {
+    color: #380B61;
+    padding: 12px 16px;
+    display: block;
+    text-align: center;
+}
+
+/* Splash Images */ 
+div.splash {
+    position: relative;
+}
+    
+div.splash img {
+    /* makes responsive */
+    max-width: 100%;
+    height: auto;
+    /* centers */
+    display: block;
+}
+
+div.splash .center {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */ 
+    padding: 3em;
+}
+
+div.splash .title {
+    font-size: 3em;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px; 
+} 
+
+div.splash .subtitle {
+    font-size: 1em;
+    text-align: center;
+}
+
+div.splash .bottomRight {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: .5em;
+    color: white;
+}
